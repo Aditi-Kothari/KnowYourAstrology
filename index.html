@@ -25,7 +25,21 @@
             </div>
             <div class="input_field">
                 <label>Zodaic Sign:</label>
-                <input type="text" class="input" placeholder="Enter Your Zodaic Sign" id="sign" >
+               <select placeholder="Enter Your zodaic sign" class="input" id="sign"> 
+                    <option value="Aries">Select Your Zodaic Sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Saggitarius">Saggitarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
             </div>
             <div class="input_field">
                 <input type="submit" value="Click Here" class="btn" onclick="lucky()" id="bn">
@@ -72,11 +86,24 @@ function lucky(){
 }
 
 function color(){
+    var name=document.getElementById("name").value;
+    var month=document.getElementById("month").value;
+    var sign=document.getElementById("sign").value;
     var items=["Red","Blue","Black","Lac","Yellow","White"," Gray","Green","Violet","Orange"];
+    if(name ==""){
+        alert("Please Enter Your Name");
+    } else if( month == ""){
+                alert("Please Enter Your Birth Month and Year")
+            } else if( sign== "") {
+                alert("Enter Your Zodaic Sign")
+            }
+            else{
     var data1=Math.floor(Math.random() * 10); 
               document.getElementById("luckyc").value=items[data1];
+            }
     
      }
+
 
 
 
