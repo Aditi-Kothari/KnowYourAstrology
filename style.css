@@ -84,6 +84,9 @@ p{
     font-size: 14px;
     color: rgb(22, 1, 99);
 }
+option{
+     font-size: 17px;
+}
 
 
 @media(max-width:420px){
