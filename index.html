@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Astrology
+        </div>
+        <div class="form">
+            <div class="input_field">
+                <label>Name:</label>
+                <input type="text" class="input" placeholder="Enter Your Name" id="name">
+            </div>
+            <div class="input_field">
+                <label>Birth Month:</label>
+                <input type="month" class="input" placeholder="Enter Your Birth Month" id="month">
+            </div>
+            <div class="input_field">
+                <label>Zodaic Sign:</label>
+                <input type="text" class="input" placeholder="Enter Your Zodaic Sign" id="sign" >
+            </div>
+            <div class="input_field">
+                <input type="submit" value="Click Here" class="btn" onclick="lucky()" id="bn">
+            </div>
+            <div class="input_field">
+                <label>Your Lucky Number:</label>
+                <input type="text" class="input" placeholder="This is your lucky number" id="luckyn">
+            </div>
+            <div class="input_field">
+                <input type="submit" value="Click Here" class="btn" onclick="color()" id="bn">
+            </div>
+            <div class="input_field">
+                <label>Your Lucky Color:</label>
+                <input type="text" class="input" placeholder="This is your lucky color" id="luckyc">
+            </div>
+            <p>Have a Good Day</p>
+            <p>Astrology reveals the will of the Gods.</p>
+            
+        </div>
+</body>
+
+<script>
+function lucky(){
+    var name=document.getElementById("name").value;
+    var month=document.getElementById("month").value;
+    var sign=document.getElementById("sign").value;
+
+    if (name == "") {
+                alert("Please Enter Your Name");
+            } else if (name.length <= 2) {
+                alert("Name should be of minimum 3 letters");
+            } else if (!isNaN(name)) {
+                alert("Name should be consist of only characters");
+            } else if( month == ""){
+                alert("Please Enter Your Birth Month and Year")
+            } else if( sign== "") {
+                alert("Enter Your Zodaic Sign")
+            }
+            else{
+                var data= Math.random()*10;
+    data=Math.floor(data);
+    document.getElementById("luckyn").value=data;
+  }  
+}
+
+function color(){
+    var items=["Red","Blue","Black","Lac","Yellow","White"," Gray","Green","Violet","Orange"];
+    var data1=Math.floor(Math.random() * 10); 
+              document.getElementById("luckyc").value=items[data1];
+    
+     }
+
+
+
+
+</script>
+
+</html>

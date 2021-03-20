@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro:ital,wght@1,600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Source Sans Pro', sans-serif; ;
+}
+body{
+   background-image: url('astrology-background.jpg');
+   background-size: cover;
+    padding: 0 15px;
+}
+.wrapper{
+    max-width: 600px;
+    width: 100%;
+    background:rgb(225, 242, 248);
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.125);
+}
+.wrapper .title{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color:rgba(0, 0, 0, 0.911);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;;
+}
+.wrapper .form{
+    width: 100%;
+}
+.wrapper .form .input_field{
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+.wrapper .form .input_field label{
+    width:200px;
+    color:rgba(19, 2, 2, 0.938);
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+.wrapper .form .input_field .input{
+    width: 100%;
+    outline: none;
+    border:1px solid rgba(0, 0, 0, 0.452);
+    padding:10px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.wrapper .form .input_field .input:focus{
+    border:2px solid rgb(181, 220, 247);
+}
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 20px;
+    border: 0;
+    background: rgb(19, 27, 31);
+    color: beige;
+    cursor: pointer;
+    border-radius: 15px;
+    outline: none;
+}
+.wrapper .form .input_field .btn:hover{
+    background-color:rgb(7, 33, 68);
+    color: white;
+}
+.wrapper .form .input_field:last-child{
+    margin-bottom: 0;
+}
+p{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+::placeholder{
+    font-size: 14px;
+    color: rgb(22, 1, 99);
+}
+
+
+@media(max-width:420px){
+    .wrapper .form .input_field{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .input_field label{
+        margin-bottom: 5px;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+}
